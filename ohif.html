@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="description" content="Open Health Imaging Foundation DICOM Viewer" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <meta http-equiv="cleartype" content="on" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- WEB FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet" />
+
+  <title>OHIF Standalone Viewer</title>
+  <script src="https://unpkg.com/@ohif/viewer@4.9.22/dist/index.umd.js" crossorigin></script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    var containerId = "root";
+    window.OHIFViewer.installViewer(
+      {
+        // routerBasename: '/',
+        // servers: {
+        //   dicomWeb: [
+        //     {
+        //       // name: 'Test',
+        //       // qidoRoot: 'http://localhost:6789', // getting list of studies JSON.
+        //       // wadoUriRoot: 'http://localhost:6789',
+        //       // wadoRoot: 'http://localhost:6789',
+
+        //       name: 'DCM4CHEE',
+        //       wadoUriRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/wado',
+        //       qidoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
+        //       wadoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
+
+        //       qidoSupportsIncludeField: true,
+        //       imageRendering: 'wadors',
+        //       thumbnailRendering: 'wadors',
+        //     },
+        //   ],
+        // },
+      }, containerId, () => {
+        console.log('OHIF viewer rendered')
+      });
+  </script>
+</body>
+
+</html>
