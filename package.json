@@ -11,7 +11,10 @@
   "author": "VinayBaviri",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "dicom-parser": "^1.8.8",
     "express": "^4.17.1",
-    "parcel": "^2.0.0-rc.0"
+    "parcel": "^2.0.0-rc.0",
+    "uuid": "^8.3.2"
   }
 }
